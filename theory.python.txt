@@ -1,0 +1,37 @@
+## Using Numpy
+
+// Example 01
+
+list1 = [1,2,3]
+import numpy as np
+arr = np.array(list1)
+print("Type/Class of this object:",type(arr))
+print("Vector\n--------------------\n",arr)
+
+// Example 02
+
+x = np.array([[1, 2, 3], [4, 5, 6]])
+print("x:\n{}".format(x))
+
+
+// Example 03
+
+f_mat = [[1,2,3],[4,5,6],[7,8,9]]
+mat = np.array(f_mat)
+print("Type/Class of this object:",type(mat))
+print("Matrix\n----------\n",mat,"\n----------")
+print("Dimension of the matrix: ",mat.ndim,sep='') #ndim gives the dimensison, 2 for a matrix, 1 for a vector
+print("Size of the matrix: ", mat.size,sep='') #size gives the total number of elements
+print("Shape of the matrix: ", mat.shape,sep='') #shape gives the number of elements along each axes (dimension)
+print("Data type of the matrix: ", mat.dtype,sep='') #dtype gives the data type contained in the array
+
+s_mat = [[1.1,2,3],[4,5.2,6],[7,8.3,9]]
+mat = np.array(s_mat)
+print("Data type of the modified matrix: ", mat.dtype,sep='') #dtype gives the data type contained in the array
+
+print("\n\nEven tuples can be converted to ndarrays...")
+
+b = np.array([(1.5,2,3), (4,5,6)])
+print("We write b = np.array([(1.5,2,3), (4,5,6)])")
+print("Matrix made from tuples, not lists\n---------------------------------------")
+print(b)
